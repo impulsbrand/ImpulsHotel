@@ -9,7 +9,8 @@ export default function RoomModal({
   onCheckOut,
   onAvailable,
   onProblem,
-  onReserve
+  onReserve,
+  clientes,
 }) {
   const [showCheckIn, setShowCheckIn] = useState(false);
   const [showReserve, setShowReserve] = useState(false);
@@ -104,6 +105,7 @@ export default function RoomModal({
         {showCheckIn && (
           <CheckInForm
             room={room}
+            clientes={clientes}
             onCancel={() => setShowCheckIn(false)}
             onSave={(clienteData) => { onCheckIn(clienteData); setShowCheckIn(false); onClose(); }}
           />

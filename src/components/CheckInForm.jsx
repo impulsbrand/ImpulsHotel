@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { clientes } from "../data/clientes";
 
-export default function CheckInForm({ room, onCancel, onSave }) {
+export default function CheckInForm({  onCancel, onSave, clientes }) {
   const [cliente, setCliente] = useState({
     nombre: "",
     apellido: "",
